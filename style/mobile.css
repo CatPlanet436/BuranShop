@@ -11,18 +11,27 @@
     }
     .shop-list {
         padding: 0 10px;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
     .header__ul {
         display: none;
     }
-    .card {
 
-    }
 }
 
 @media (max-width: 360px) {
     nav button {
         display: none;
+    }
+    .shop-list {
+        padding: 0 5px;
+        gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .card img {
+        height: 150px;
+    }
+    .card:hover {
+        transform: translateY(0px);
     }
 }
