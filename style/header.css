@@ -1,0 +1,44 @@
+.header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--color-bg-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-radius: 0 0 20px 20px;
+}
+
+.header h1 {
+    font-size: 30px;
+}
+
+.header__ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-weight: 500;
+    font-family: var(--font-main);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav button {
+    margin-left: 30px;
+    padding: 8px 16px;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-main);
+    border: none;
+    border-radius: 6px;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: var(--color-bg-hover);
+}
