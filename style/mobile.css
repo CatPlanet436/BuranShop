@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .header {
+        border-radius: 0 0;
+
+    }
+    .categories {
+        display: none;
+    }
+    .container {
+        padding: 0;
+    }
+    .shop-list {
+        padding: 0 10px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .header__ul {
+        display: none;
+    }
+    .card {
+
+    }
+}
+
+@media (max-width: 360px) {
+    nav button {
+        display: none;
+    }
+}

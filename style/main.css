@@ -1,3 +1,7 @@
+* {
+    transition: padding 0.2s ease;
+}
+
 body, html {
     width: 100%;
     cursor: default;
