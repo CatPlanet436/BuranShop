@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>less</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Buran Shop</h1>
+        <nav>
+            <ul class="header__ul">
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contacts</li>
+            </ul>
+            <button>Theme</button>
+        </nav>
+    </header>
+</div>
+<div class="main-block">
+    <div class="container">
+        <section class="main">
+            <section class="categories">
+                <h2>Фильтры</h2>
+                <form id="filterForm">
+                    <label class="filter-option">
+                        <input type="checkbox" name="tag" value="cat">
+                        Кот
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="tag" value="fox">
+                        Лис
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="tag" value="wolf">
+                        Волк
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="tag" value="rabbit">
+                        Заяц
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="tag" value="gigachad">
+                        Гигачад
+                    </label>
+                </form>
+            </section>
+
+
+            <section class="shop-list">
+                <div class="card" data-tags="cat" id="Serval">
+                    <img src="images/product1.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">228 ₿</span>
+                        <span class="price__advertise">229 ₿</span>
+                    </div>
+                    <h3>Сервал</h3>
+                    <p>Мррррр мяу!</p>
+                    <button>Купить!</button>
+                </div>
+                <div class="card" data-tags="fox" id="Buran">
+                    <img src="images/photo_2025-05-04_15-51-23.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">$436</span>
+                        <span class="price__advertise">$1488</span>
+                    </div>
+                    <h3>Буранчик</h3>
+                    <p>Пожалеете о покупке не сразу</p>
+                    <button>Купить!</button>
+                </div>
+                <div class="card" data-tags="cat" id="Lost">
+                    <img src="images/photo_2025-05-04_15-50-57.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">120000 ₽/мес</span>
+                        <span class="price__advertise"></span>
+                    </div>
+                    <h3>Лостик</h3>
+                    <p>Удобный и не оставит лишних следов UwU</p>
+                    <button>Купить!</button>
+                </div>
+                <div class="card" data-tags="wolf" id="Befrich">
+                    <img src="images/photo_2025-05-04_15-52-49.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">€700</span>
+                        <span class="price__advertise"></span>
+                    </div>
+                    <h3>Бефрич</h3>
+                    <p>Добрый, тактильный, открытый, гейтарист</p>
+                    <button>Купить!</button>
+                </div>
+                <div class="card" data-tags="rabbit" id="eecheego">
+                    <img src="images/photo_2025-05-04_15-51-08.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">2 ₸</span>
+                        <span class="price__advertise">1 ₸</span>
+                    </div>
+                    <h3>Ичиго</h3>
+                    <p>Шлюшк</p>
+                    <button>Купить!</button>
+                </div>
+                <div class="card" data-tags="cat" id="novik">
+                    <img src="images/photo_2025-05-04_15-51-37.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">XXX</span>
+                        <span class="price__advertise"></span>
+                    </div>
+                    <h3>Новик</h3>
+                    <p>Не знаю</p>
+                    <button>Купить!</button>
+                </div>
+                <div class="card" data-tags="wolf" id="goodboy">
+                    <img src="images/photo_2025-05-04_15-53-12.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">2025 ¥</span>
+                        <span class="price__advertise">2025 ¥</span>
+                    </div>
+                    <h3>Гуд бой~</h3>
+                    <p>Мне лень было ему писать</p>
+                    <button>Купить!</button>
+                </div>
+                <div class="card" data-tags="gigachad" id="Artur">
+                    <img src="images/photo_2025-05-04_15-52-57.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">719 ₽</span>
+                        <span class="price__advertise">999 ₽</span>
+                    </div>
+                    <h3>Гигачад</h3>
+                    <p>Никакой романтики — только протеин</p>
+                    <button>Купить!</button>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+<div class="bin-block">
+    <div class="container">
+        <div class="bin">
+            <section class="buys">
+
+            </section>
+            <section class="payment">
+                <div class="button-buy">Перейти к оформлению</div>
+                <div class="your-bin">
+                    <h1>Ваша корзина</h1>
+                    <span>0 товаров • дохуя кг</span>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+<p>
+    <span style="color: red;">Я</span>
+    <span style="color: orange;"> </span>
+    <span style="color: yellow;">с</span>
+    <span style="color: green;">к</span>
+    <span style="color: cyan;">у</span>
+    <span style="color: blue;">ш</span>
+    <span style="color: indigo;">а</span>
+    <span style="color: violet;">ю</span>
+    <span style="color: pink;"> </span>
+    <span style="color: brown;">в</span>
+    <span style="color: teal;">а</span>
+    <span style="color: coral;">ш</span>
+    <span style="color: gold;">и</span>
+    <span style="color: lime;"> </span>
+    <span style="color: navy;">я</span>
+    <span style="color: olive;">й</span>
+    <span style="color: salmon;">к</span>
+    <span style="color: gray;">и</span>
+</p>
+
+<script src="script/main.js"></script>
+</body>
+</html>

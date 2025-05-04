@@ -1,0 +1,261 @@
+body, html {
+    width: 100%;
+    cursor: default;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #111131;
+    line-height: 1.6;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.container {
+    padding: 0 60px;
+    margin-bottom: 20px;
+}
+
+/* навигация сверху */
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #0a0a23;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-radius: 0 0 20px 20px;
+}
+.header h1 {
+    font-size: 30px;
+}
+.header__ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav button {
+    margin-left: 30px;
+    padding: 8px 16px;
+    background-color: #1f1f4d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #2a2a66;
+}
+
+/* каталог */
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.categories {
+    width: 512px;
+    min-height: 100%;
+    background-color: #1f1f4d;
+    border-radius: 20px;
+}
+
+.shop-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1f1f4d;
+    min-height: 350px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    color: white;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 5px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0 0 12px;
+    flex-grow: 1;
+}
+
+.card button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #2a2a66;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #3a3a80;
+}
+
+.price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price__main {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffcc00; /* яркий акцент: жёлтый */
+}
+
+.price__advertise {
+    font-size: 16px;
+    color: #adadad; /* тусклый серый */
+    text-decoration: line-through;
+}
+
+/* categories */
+
+.categories {
+    width: 512px;
+    background-color: #1f1f4d;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categories h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.filter-option:hover {
+    background-color: #2a2a66;
+}
+
+.filter-option input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #ffcc00; /* цвет галочки */
+    cursor: pointer;
+}
+
+
+
+
+/*------------------------------------------------- BIN BLOCK ------------------------------------------------*/
+
+.main-block {
+    display: none;
+}
+.bin {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.buys {
+    width: 100%;
+    min-height: 512px;;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.payment {
+    width: 512px;
+    min-height: 1024px;
+    background-color: #1f1f4d;
+    border-radius: 20px;
+    padding: 10px;
+}
+.button-buy {
+    width: 100%;
+    height: 64px;
+    background-color: #2a2a66;
+    box-sizing: border-box;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+}
+.your-bin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.your-bin h1 {
+    font-size: 20px;
+}
+.your-bin span {
+    font-size: 13px;
+    color: #d0d0d0;
+}
