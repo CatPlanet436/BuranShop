@@ -20,15 +20,52 @@
 }
 
 @media (max-width: 360px) {
+    .header {
+        margin-bottom: 5px;
+    }
     .shop-list {
         padding: 0 5px;
         gap: 5px;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .cart-items {
+        padding: 0 5px;
+        gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    }
+    .bin {
+        flex-flow: column;
+        justify-content: normal;
+        gap: 5px;
+
+    }
+    .your-bin span {
+        display: none;
+    }
+    .payment {
+        max-width: 100%;
+        padding: 0 5px;
+        border-radius: 16px 16px 0 0;
+    }
+    .button-buy {
+        font-size: 21px;
+        font-weight: 500;
+        width: auto;
+    }
+    .card {
+        min-height: 250px;
     }
     .card img {
         height: 150px;
     }
     .card:hover {
         transform: translateY(0px);
+    }
+    .container {
+        margin-bottom: 0;
+    }
+    #pisya {
+        display: none;
     }
 }

@@ -251,6 +251,7 @@ button.in-cart {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    box-sizing: border-box;
 }
 .payment {
     width: 512px;
@@ -258,6 +259,7 @@ button.in-cart {
     background-color: #1f1f4d;
     border-radius: 20px;
     padding: 10px;
+    box-sizing: border-box;
 }
 .button-buy {
     width: 100%;
