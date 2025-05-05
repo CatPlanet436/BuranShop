@@ -1,70 +1,84 @@
+/* ---------- Медиа: до 768px ---------- */
 @media (max-width: 768px) {
     .header {
         border-radius: 0 0;
-
     }
-    .categories {
+
+    .header__menu {
         display: none;
     }
+
+    .filters {
+        display: none;
+    }
+
     .container {
         padding: 0;
     }
-    .shop-list {
+
+    .product-list {
         padding: 0 10px;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
-    .header__ul {
-        display: none;
-    }
-
 }
 
+
+/* ---------- Медиа: до 360px ---------- */
 @media (max-width: 360px) {
     .header {
         margin-bottom: 5px;
     }
-    .shop-list {
-        padding: 0 5px;
-        gap: 5px;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    .cart-items {
-        padding: 0 5px;
-        gap: 5px;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
+    .container {
+        margin-bottom: 0;
     }
-    .bin {
+
+    .product-list {
+        padding: 0 5px;
+        gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .product-card {
+        min-height: 250px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .product-card:hover {
+        transform: translateY(0px);
+    }
+
+    .cart__items {
+        padding: 0 5px;
+        gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .cart__content {
         flex-flow: column;
         justify-content: normal;
         gap: 5px;
+    }
 
-    }
-    .your-bin span {
-        display: none;
-    }
-    .payment {
+    .cart__summary {
         max-width: 100%;
         padding: 0 5px;
         border-radius: 16px 16px 0 0;
     }
-    .button-buy {
+
+    .cart__summary-header span {
+        display: none;
+    }
+
+    .cart__checkout-button {
+        width: auto;
         font-size: 21px;
         font-weight: 500;
-        width: auto;
     }
-    .card {
-        min-height: 250px;
-    }
-    .card img {
-        height: 150px;
-    }
-    .card:hover {
-        transform: translateY(0px);
-    }
-    .container {
-        margin-bottom: 0;
-    }
+
     #pisya {
         display: none;
     }

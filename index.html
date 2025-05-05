@@ -13,206 +13,205 @@
 <body>
 <div class="container">
     <header class="header">
-        <h1>Buran Shop</h1>
-        <nav>
-            <ul class="header__ul">
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contacts</li>
+        <h1 class="header__logo">Buran Shop</h1>
+        <nav class="header__nav">
+            <ul class="header__menu" role="menubar">
+                <li class="header__menu-item">About</li>
+                <li class="header__menu-item">Projects</li>
+                <li class="header__menu-item">Contacts</li>
             </ul>
-            <button class="cart-button" aria-label="Корзина" onclick="openCart()">
+            <button class="header__cart-button" aria-label="Корзина" onclick="openCart()">
                 <img src="images/Icons/Без%20названия2_20250505131628.png" alt="Корзина">
                 <span class="cart-count">0</span>
             </button>
         </nav>
     </header>
 </div>
-<div id="main-block">
+<main id="main-block">
     <div class="container">
         <section class="main">
-            <section class="categories">
-                <h2>Фильтры</h2>
+            <aside class="filters">
+                <h2 class="filters__title">Фильтры</h2>
                 <form id="filterForm">
-                    <label class="filter-option">
+                    <label class="filters__option">
                         <input type="checkbox" name="tag" value="cat">
                         Кот
                     </label>
-                    <label class="filter-option">
+                    <label class="filters__option">
                         <input type="checkbox" name="tag" value="fox">
                         Лис
                     </label>
-                    <label class="filter-option">
+                    <label class="filters__option">
                         <input type="checkbox" name="tag" value="wolf">
                         Волк
                     </label>
-                    <label class="filter-option">
+                    <label class="filters__option">
                         <input type="checkbox" name="tag" value="rabbit">
                         Заяц
                     </label>
-                    <label class="filter-option">
+                    <label class="filters__option">
                         <input type="checkbox" name="tag" value="gigachad">
                         Гигачад
                     </label>
-                    <label class="filter-option">
+                    <label class="filters__option">
                         <input type="checkbox" name="tag" value="protogen">
                         Протоген
                     </label>
                 </form>
-            </section>
+            </aside>
 
 
-            <section class="shop-list">
-                <div class="card" data-tags="cat" id="Serval">
+            <section class="product-list">
+                <article class="product-card" data-tags="cat" id="Serval">
                     <img src="images/product1.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">228 ₿</span>
-                        <span class="price__advertise">229 ₿</span>
+                        <span class="price__old">229 ₿</span>
                     </div>
                     <h3>Сервал</h3>
                     <p>Мррррр мяу!</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="fox" id="Buran">
+                </article>
+                <article class="product-card" data-tags="fox" id="Buran">
                     <img src="images/photo_2025-05-04_15-51-23.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">$436</span>
-                        <span class="price__advertise">$1488</span>
+                        <span class="price__old">$1488</span>
                     </div>
                     <h3>Буранчик</h3>
                     <p>Пожалеете о покупке не сразу</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="cat" id="Lost">
+                </article>
+                <article class="product-card" data-tags="cat" id="Lost">
                     <img src="images/photo_2025-05-04_15-50-57.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">120000 ₽/мес</span>
-                        <span class="price__advertise"></span>
+                        <span class="price__old"></span>
                     </div>
                     <h3>Лостик</h3>
                     <p>Удобный и не оставит лишних следов UwU</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="wolf" id="Befrich">
+                </article>
+                <article class="product-card" data-tags="wolf" id="Befrich">
                     <img src="images/photo_2025-05-04_15-52-49.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">€700</span>
-                        <span class="price__advertise"></span>
+                        <span class="price__old"></span>
                     </div>
                     <h3>Бефрич</h3>
                     <p>Добрый, тактильный, открытый, гейтарист</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="rabbit" id="eecheego">
+                </article>
+                <article class="product-card" data-tags="rabbit" id="eecheego">
                     <img src="images/photo_2025-05-04_15-51-08.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">2 ₸</span>
-                        <span class="price__advertise">1 ₸</span>
+                        <span class="price__old">1 ₸</span>
                     </div>
                     <h3>Ичиго</h3>
                     <p>Шлюшк</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="cat" id="novik">
+                </article>
+                <article class="product-card" data-tags="cat" id="novik">
                     <img src="images/photo_2025-05-04_15-51-37.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">5233 ₽</span>
-                        <span class="price__advertise">7500 ₽</span>
+                        <span class="price__old">7500 ₽</span>
                     </div>
                     <h3>Новик</h3>
                     <p>Милый, обаятельный, чистый ухоженный, вкусно пахнет</p>
                     <button>Купить!</button>
-                </div>
-                <div class="card" data-tags="protogen" id="fluffik">
+                </article>
+                <article class="product-card" data-tags="protogen" id="fluffik">
                     <img src="images/photo_2025-05-04_17-46-41.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">2025 ¥</span>
-                        <span class="price__advertise">2025 ¥</span>
+                        <span class="price__old">2025 ¥</span>
                     </div>
                     <h3>Флуффик</h3>
                     <p>Бип буп бубубуп</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="gigachad" id="Artur">
+                </article>
+                <article class="product-card" data-tags="gigachad" id="Artur">
                     <img src="images/photo_2025-05-04_15-52-57.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">719 ₽</span>
-                        <span class="price__advertise">999 ₽</span>
+                        <span class="price__old">999 ₽</span>
                     </div>
                     <h3>Гигачад</h3>
                     <p>Никакой романтики — только протеин</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="wolf" id="goodboy">
+                </article>
+                <article class="product-card" data-tags="wolf" id="goodboy">
                     <img src="images/photo_2025-05-04_15-53-12.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">18 ¥</span>
-                        <span class="price__advertise"></span>
+                        <span class="price__old"></span>
                     </div>
                     <h3>Гуд бой~</h3>
                     <p>Мне лень было ему писать</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="wolf" id="vitnan">
+                </article>
+                <article class="product-card" data-tags="wolf" id="vitnan">
                     <img src="images/photo_2025-05-04_18-30-06.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">1945 Đ</span>
-                        <span class="price__advertise"></span>
+                        <span class="price__old"></span>
                     </div>
                     <h3>Витнан</h3>
                     <p>Админ канала с хентаем</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="cat" id="bendy">
+                </article>
+                <article class="product-card" data-tags="cat" id="bendy">
                     <img src="images/photo_2025-05-05_10-13-56.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">Бесплатно!</span>
-                        <span class="price__advertise">Платно</span>
+                        <span class="price__old">Платно</span>
                     </div>
                     <h3>Бэнди</h3>
                     <p>Демонюга</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="cat" id="nyazmix">
+                </article>
+                <article class="product-card" data-tags="cat" id="nyazmix">
                     <img src="images/photo_2025-05-05_10-16-07.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">∞</span>
-                        <span class="price__advertise"></span>
+                        <span class="price__old"></span>
                     </div>
                     <h3>Ньязмикс</h3>
                     <p></p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
-                <div class="card" data-tags="fox" id="nastya">
+                </article>
+                <article class="product-card" data-tags="fox" id="nastya">
                     <img src="images/photo_2025-05-05_10-25-59.jpg" alt="Product name">
-                    <div class="price">
+                    <div class="product-card__price">
                         <span class="price__main">2к рубчиков</span>
-                        <span class="price__advertise"></span>
+                        <span class="price__old"></span>
                     </div>
                     <h3>Настя</h3>
                     <p>Любитель пошутить,и понадоедать. Милая девушка</p>
                     <button onclick="toggleCart(this)">Купить!</button>
-                </div>
+                </article>
             </section>
         </section>
     </div>
-</div>
-<div id="cart-block" class="transparent">
+</main>
+<section id="cart-block" class="transparent">
     <div class="container">
-        <div class="bin">
-            <section class="cart-items">
+        <div class="cart__content">
+            <section class="cart__items">
 
             </section>
-            <section class="payment">
-                <div class="your-bin">
-                    <h1>Ваша корзина</h1>
-                    <span>0 товаров • дохуя кг</span>
+            <section class="cart__summary">
+                <div class="cart__summary-header">
+                    <h1 class="cart__title">Ваша корзина</h1>
+                    <span class="cart__subtitle">0 товаров • дохуя кг</span>
                 </div>
-                <div class="button-buy">Перейти к оформлению</div>
-
+                <div class="cart__checkout-button">Перейти к оформлению</div>
             </section>
         </div>
     </div>
-</div>
+</section>
 <p id="pisya">
     <span style="color: red;">Я</span>
     <span style="color: orange;"> </span>

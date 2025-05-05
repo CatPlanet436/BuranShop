@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const checkboxes = document.querySelectorAll('input[name="tag"]');
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.product-card');
 
     function filterCards() {
         const checkedTags = Array.from(checkboxes)
@@ -29,9 +29,9 @@ document.querySelector('.cart-count').textContent = cartCount;
 
 const cart = new Set();
 function toggleCart(button) {
-    const card = button.closest('.card');
+    const card = button.closest('.product-card');
     const productId = card.id;
-    const cartItemsContainer = document.querySelector('.cart-items')
+    const cartItemsContainer = document.querySelector('.cart__items')
 
     if (cart.has(productId)) {
         cart.delete(productId);
@@ -53,7 +53,7 @@ function toggleCart(button) {
 }
 
 function addToCart(cardClone) {
-    const cartItemsContainer = document.querySelector('.cart-items');
+    const cartItemsContainer = document.querySelector('.cart__items');
     const buyButton = cardClone.querySelector('button');
     if (buyButton) {
         buyButton.remove();
@@ -62,7 +62,7 @@ function addToCart(cardClone) {
 }
 
 function removeFromCart(productId) {
-    const cartItemsContainer = document.querySelector('.cart-items');
+    const cartItemsContainer = document.querySelector('.cart__items');
     const itemToRemove = cartItemsContainer.querySelector(`#${productId}`);
     if (itemToRemove) {
         cartItemsContainer.removeChild(itemToRemove);
