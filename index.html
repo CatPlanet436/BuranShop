@@ -20,11 +20,14 @@
                 <li>Projects</li>
                 <li>Contacts</li>
             </ul>
-            <button>Theme</button>
+            <button class="cart-button" aria-label="Корзина" onclick="openCart()">
+                <img src="images/Icons/Без%20названия2_20250505131628.png" alt="Корзина">
+                <span class="cart-count">0</span>
+            </button>
         </nav>
     </header>
 </div>
-<div class="main-block">
+<div id="main-block">
     <div class="container">
         <section class="main">
             <section class="categories">
@@ -67,7 +70,7 @@
                     </div>
                     <h3>Сервал</h3>
                     <p>Мррррр мяу!</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
                 <div class="card" data-tags="fox" id="Buran">
                     <img src="images/photo_2025-05-04_15-51-23.jpg" alt="Product name">
@@ -77,7 +80,7 @@
                     </div>
                     <h3>Буранчик</h3>
                     <p>Пожалеете о покупке не сразу</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
                 <div class="card" data-tags="cat" id="Lost">
                     <img src="images/photo_2025-05-04_15-50-57.jpg" alt="Product name">
@@ -87,7 +90,7 @@
                     </div>
                     <h3>Лостик</h3>
                     <p>Удобный и не оставит лишних следов UwU</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
                 <div class="card" data-tags="wolf" id="Befrich">
                     <img src="images/photo_2025-05-04_15-52-49.jpg" alt="Product name">
@@ -97,7 +100,7 @@
                     </div>
                     <h3>Бефрич</h3>
                     <p>Добрый, тактильный, открытый, гейтарист</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
                 <div class="card" data-tags="rabbit" id="eecheego">
                     <img src="images/photo_2025-05-04_15-51-08.jpg" alt="Product name">
@@ -107,7 +110,7 @@
                     </div>
                     <h3>Ичиго</h3>
                     <p>Шлюшк</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
                 <div class="card" data-tags="cat" id="novik">
                     <img src="images/photo_2025-05-04_15-51-37.jpg" alt="Product name">
@@ -127,7 +130,7 @@
                     </div>
                     <h3>Флуффик</h3>
                     <p>Бип буп бубубуп</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
                 <div class="card" data-tags="gigachad" id="Artur">
                     <img src="images/photo_2025-05-04_15-52-57.jpg" alt="Product name">
@@ -137,7 +140,7 @@
                     </div>
                     <h3>Гигачад</h3>
                     <p>Никакой романтики — только протеин</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
                 <div class="card" data-tags="wolf" id="goodboy">
                     <img src="images/photo_2025-05-04_15-53-12.jpg" alt="Product name">
@@ -147,7 +150,7 @@
                     </div>
                     <h3>Гуд бой~</h3>
                     <p>Мне лень было ему писать</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
                 <div class="card" data-tags="wolf" id="vitnan">
                     <img src="images/photo_2025-05-04_18-30-06.jpg" alt="Product name">
@@ -157,27 +160,57 @@
                     </div>
                     <h3>Витнан</h3>
                     <p>Админ канала с хентаем</p>
-                    <button>Купить!</button>
+                    <button onclick="toggleCart(this)">Купить!</button>
+                </div>
+                <div class="card" data-tags="cat" id="bendy">
+                    <img src="images/photo_2025-05-05_10-13-56.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">Бесплатно!</span>
+                        <span class="price__advertise">Платно</span>
+                    </div>
+                    <h3>Бэнди</h3>
+                    <p>Демонюга</p>
+                    <button onclick="toggleCart(this)">Купить!</button>
+                </div>
+                <div class="card" data-tags="cat" id="nyazmix">
+                    <img src="images/photo_2025-05-05_10-16-07.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">∞</span>
+                        <span class="price__advertise"></span>
+                    </div>
+                    <h3>Ньязмикс</h3>
+                    <p></p>
+                    <button onclick="toggleCart(this)">Купить!</button>
+                </div>
+                <div class="card" data-tags="fox" id="nastya">
+                    <img src="images/photo_2025-05-05_10-25-59.jpg" alt="Product name">
+                    <div class="price">
+                        <span class="price__main">2к рубчиков</span>
+                        <span class="price__advertise"></span>
+                    </div>
+                    <h3>Настя</h3>
+                    <p>Любитель пошутить,и понадоедать. Милая девушка</p>
+                    <button onclick="toggleCart(this)">Купить!</button>
                 </div>
             </section>
         </section>
     </div>
 </div>
-<div class="bin-block">
+<div id="cart-block" class="transparent">
     <div class="container">
         <div class="bin">
-            <section class="buys">
+            <section class="cart-items">
 
             </section>
             <section class="payment">
-                <div class="button-buy">Перейти к оформлению</div>
                 <div class="your-bin">
                     <h1>Ваша корзина</h1>
                     <span>0 товаров • дохуя кг</span>
                 </div>
+                <div class="button-buy">Перейти к оформлению</div>
+
             </section>
         </div>
-
     </div>
 </div>
 <p>

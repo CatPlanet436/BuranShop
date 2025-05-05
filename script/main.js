@@ -10,13 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach(card => {
             const tags = card.dataset.tags.split(',');
 
-            // Если фильтров нет — показать все
             if (checkedTags.length === 0) {
                 card.style.display = 'block';
                 return;
             }
 
-            // Сравнение тегов
             const matches = checkedTags.some(tag => tags.includes(tag));
             card.style.display = matches ? 'block' : 'none';
         });
@@ -24,3 +22,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkboxes.forEach(cb => cb.addEventListener('change', filterCards));
 });
+
+let cartCount = 0;
+
+document.querySelector('.cart-count').textContent = cartCount;
+
+const cart = new Set();
+function toggleCart(button) {
+    const card = button.closest('.card');
+    const productId = card.id;
+    const cartItemsContainer = document.querySelector('.cart-items')
+
+    if (cart.has(productId)) {
+        cart.delete(productId);
+        button.classList.remove('in-cart');
+        button.textContent = 'Купить!';
+        removeFromCart(productId);
+
+        cartCount--;
+        document.querySelector('.cart-count').textContent = cartCount;
+    } else {
+        cart.add(productId);
+        button.classList.add('in-cart');
+        button.textContent = 'В корзине';
+        addToCart(card.cloneNode(true));
+
+        cartCount++;
+        document.querySelector('.cart-count').textContent = cartCount;
+    }
+}
+
+function addToCart(cardClone) {
+    const cartItemsContainer = document.querySelector('.cart-items');
+    const buyButton = cardClone.querySelector('button');
+    if (buyButton) {
+        buyButton.remove();
+    }
+    cartItemsContainer.appendChild(cardClone);
+}
+
+function removeFromCart(productId) {
+    const cartItemsContainer = document.querySelector('.cart-items');
+    const itemToRemove = cartItemsContainer.querySelector(`#${productId}`);
+    if (itemToRemove) {
+        cartItemsContainer.removeChild(itemToRemove);
+    }
+}
+
+function openCart() {
+    document.getElementById('main-block').classList.toggle('transparent');
+    document.getElementById('cart-block').classList.toggle('transparent');
+}

@@ -20,9 +20,6 @@
 }
 
 @media (max-width: 360px) {
-    nav button {
-        display: none;
-    }
     .shop-list {
         padding: 0 5px;
         gap: 5px;

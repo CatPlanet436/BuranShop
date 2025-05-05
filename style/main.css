@@ -1,5 +1,5 @@
 * {
-    transition: padding 0.2s ease;
+    transition: padding 0.2s ease, transform 0.2s;
 }
 
 body, html {
@@ -56,20 +56,38 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-nav button {
+.cart-button {
     margin-left: 30px;
-    padding: 8px 16px;
+    padding: 8px;
     background-color: #1f1f4d;
-    color: #fff;
     border: none;
     border-radius: 6px;
-    font-family: 'Inter', sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav button:hover {
+.cart-button:hover {
     background-color: #2a2a66;
+}
+
+.cart-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    padding-right: 6px
+}
+.cart-count {
+    background-color: #ff5050;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 100px;
+    line-height: 1.5;
+    min-width: 20px;
+    text-align: center;
 }
 
 /* каталог */
@@ -97,6 +115,7 @@ nav button:hover {
 .card {
     background-color: #1f1f4d;
     min-height: 350px;
+    max-height: 430px;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -106,9 +125,13 @@ nav button:hover {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    max-width: 340px;
+    max-width: 330px;
 }
-
+button.in-cart {
+    background-color: #28a745 !important;
+    color: #fff;
+    font-weight: bold;
+}
 .card:hover {
     transform: translateY(-5px);
 }
@@ -213,7 +236,7 @@ nav button:hover {
 
 /*------------------------------------------------- BIN BLOCK ------------------------------------------------*/
 
-.bin-block {
+.transparent {
     display: none;
 }
 .bin {
@@ -223,16 +246,15 @@ nav button:hover {
     gap: 20px;
 }
 
-.buys {
+.cart-items {
     width: 100%;
-    min-height: 512px;;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 .payment {
     width: 512px;
-    min-height: 1024px;
+    min-height: 256px;
     background-color: #1f1f4d;
     border-radius: 20px;
     padding: 10px;
@@ -255,7 +277,8 @@ nav button:hover {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 .your-bin h1 {
     font-size: 20px;
